@@ -23,7 +23,8 @@ from Post import views as views_post
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', local_views.helloWorld, name='hello_world'),
-    path('login/', views_user.Signup, name='login'),
+    path('login/', views_user.login, name='login'),
+    path('logout/', views_user.user_logout, name='logout'),
     path('post/', views_post.post, name='post'),
     path('logout/', local_views.logout),
 ]
