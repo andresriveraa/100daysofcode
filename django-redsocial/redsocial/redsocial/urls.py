@@ -25,6 +25,7 @@ urlpatterns = [
     path('', local_views.helloWorld, name='hello_world'),
     path('login/', views_user.login, name='login'),
     path('logout/', views_user.user_logout, name='logout'),
+    path('signup/', views_user.user_signup, name='signup'),
     path('post/', views_post.post, name='post'),
     path('logout/', local_views.logout),
 ]
