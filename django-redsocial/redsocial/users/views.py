@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login as auth_login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .models import Profile
-
+from users.forms import ProfileForm
 # Create your views here.
 def login(request):
     if request.method == 'POST':
@@ -43,3 +43,23 @@ def user_signup(request):
 
         return redirect('login')
     return render(request, 'user/signup.html')
+
+
+def update_profile(request):
+    profile = request.user.profile
+    if request.method == 'POST':
+        form = ProfileForm(request.POST)
+        if form.is_valid():
+            print(form.cleaned_data)
+    else:
+        form = profile
+
+    return render(
+        request=request,
+        template_name='user/update_profile.html',
+        context={
+            'profile': profile,
+            'user': request.user,
+            'form': form
+        }
+    )
