@@ -9,8 +9,9 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     interest = models.TextField(max_length=100)
     email = models.EmailField(max_length=254)
-    image = models.ImageField(upload_to='user/picture', blank=True,
-                              height_field=300, width_field=None
+    image = models.ImageField(upload_to='user/picture',
+                              blank=True,
+                              null=True
                               )
     wePage = models.URLField(max_length=200)
     create = models.DateTimeField(auto_now_add=True)

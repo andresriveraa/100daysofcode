@@ -3,26 +3,27 @@
 <title>sing in</title>
 {% endblock %}
 {% block container %}
-    {% if errorsignup %}
-        <p style="color : red" > {{errorsignup}} </p>
+    {% if form.errors %}
+        <p style="color : red" > {{form.errors}} </p>
     {% endif %}
 
-    <form action="{% url 'updateprofile' %}" method="POST" enctype="multipart/form-data">
+    <form action="{% url 'updateprofile' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
         <p name="biography">{{user.username}}</p>
+        <p name="biography">{{user.get_full_name}}</p>
         <p name="biography">{{profile.user}}</p>
 
         <input id="Webpage"
                placeholder="Web Page"
                value="{{profile.wePage}}"
-               type="text" name="webpage">
+               type="url" name="wePage">
         <input id="InterestSeller"
                placeholder="Interest"
                value="{{ profile.interest }}"
-               type="Interest" name="Interest">
+               type="text" name="interest">
         <input id="imageProfile"
                value="{{ profile.image }}"
-               type="file" name="Image">dd
-        <button type="submit"> Actualizar </button>
+               type="file" name="image">
+        <button type="submit" value="OK"> Actualizar </button>
   </form>
 {% endblock %}

@@ -53,11 +53,12 @@ def update_profile(request):
         form = ProfileForm(request.POST, request.FILES)
         if form.is_valid():
             data = form.cleaned_data
-            profile.wePage = data['webpage']
-            profile.interest = data['Interest']
-            profile.image = data['Image']
+            print(form.cleaned_data)
+            profile.wePage = data['wePage']
+            profile.interest = data['interest']
+            profile.image = data['image']
             profile.save()
-            return redirect('login')
+            return redirect('updateprofile')
 
     else:
         form = ProfileForm()
