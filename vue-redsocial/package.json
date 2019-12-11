@@ -32,7 +32,10 @@
       "plugin:vue/essential",
       "@vue/airbnb"
     ],
-    "rules": {},
+    "rules": {
+      "linebreak-style": 0,
+      "no-console": "off"
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
