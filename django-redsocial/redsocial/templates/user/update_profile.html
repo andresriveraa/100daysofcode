@@ -3,9 +3,9 @@
 <title>sing in</title>
 {% endblock %}
 {% block container %}
-    {% if form.errors %}
-        <p style="color : red" > {{form.errors}} </p>
-    {% endif %}
+    <!--{% if form.errors %}-->
+        <!--<p style="color : red" > {{form.errors}} </p>-->
+    <!--{% endif %}-->
 
     <form action="{% url 'updateprofile' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
@@ -14,16 +14,20 @@
         <p name="biography">{{profile.user}}</p>
 
         <input id="Webpage"
+               class="{% if form.webPage.errors %}{% endif %} "
                placeholder="Web Page"
-               value="{{profile.wePage}}"
-               type="url" name="wePage">
+               value="{% if form.errors %}{{form.wePage.value}}{% else %}{{profile.wePage}}{% endif %} "
+               type="type" name="wePage">
+        <p>{% for error in form.wePage.errors %}{{ error }}{% endfor %}</p>
         <input id="InterestSeller"
                placeholder="Interest"
-               value="{{ profile.interest }}"
+                value="{% if form.errors %}{{form.interest.value}}{% else %}{{profile.interest}}{% endif %} "
                type="text" name="interest">
+         <p>{% for error in form.interest.errors %}{{ error }}{% endfor %}</p>
         <input id="imageProfile"
                value="{{ profile.image }}"
                type="file" name="image">
+         <p>{% for error in form.image.errors %}{{ error }}{% endfor %}</p>
         <button type="submit" value="OK"> Actualizar </button>
   </form>
 {% endblock %}
