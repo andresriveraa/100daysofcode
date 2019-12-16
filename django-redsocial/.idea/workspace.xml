@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bda107fc-e46a-4283-90c3-ea3039ad1048" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/django-redsocial.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/django-redsocial.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redsocial/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/redsocial/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redsocial/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/redsocial/templates/user/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redsocial/templates/user/update_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/redsocial/templates/user/update_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redsocial/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/redsocial/users/forms.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +23,7 @@
   <component name="ProjectId" id="1TGvT8fkKN2QuQWfDGSn218fwWU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../pythonCourse/basic_python/proyecto" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
